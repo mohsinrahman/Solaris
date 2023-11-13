@@ -1,0 +1,67 @@
+[{
+"id":"Solen",
+"name" :"sun",
+"width":"318px",
+"height":"600px",
+"background":"#FFD029",
+"borderadius":"0px 300px 300px 0px"
+},      
+{
+"id":"Merkurius",
+"name":"Merkurius",
+"width":"14px",
+"height":"14px",
+"background":"#888888",
+"borderadius":"50%"
+},
+{
+"id":"Venus",
+"name":"Venus",
+"width":"26px",
+"height":"26px",
+"background":"#E7CDCD",
+"borderadius":"50%"
+},
+{
+"id":"Jorden",   
+"name":"Jorden",
+"width":"28px",
+"height":"28px",
+"background":"#428ED4",
+"borderadius":"50%"
+},
+{
+    "id":"Mars",
+"name":"Mars",
+"width":"14px",
+"height":"14px",
+"background":"#EF5F5F",
+"borderadius":"50%"},
+{
+    "id":"Jupiter",
+    "name":"Jupiter",
+"width":"188px",
+"height":"188px",
+"background":"#E29468",
+"borderadius":"50%"},
+{
+    "id":"Saturnus",
+    "name":"Saturnus",
+"width":"144px",
+"height":"144px",
+"background":"#C7AA72",
+"borderadius":"50%"},
+{
+    "id":"Uranus",
+    "name":"Uranus",
+"width":"66px",
+"height":"66px",
+"background":"#C9D4F1",
+"borderadius":"50%"},
+{
+    "id":"Neptunus",
+    "name":"Neptunus",
+"width":"66px",
+"height":"66px",
+"background":"#7A91A7",
+"borderadius":"50%"}]
