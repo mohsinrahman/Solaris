@@ -50,7 +50,8 @@
 "width":"144px",
 "height":"144px",
 "background":"#C7AA72",
-"borderadius":"50%"},
+"borderadius":"50%",
+"line": "images/ellipse.png"},
 {
     "id":"Uranus",
     "name":"Uranus",
