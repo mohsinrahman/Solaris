@@ -1,6 +1,9 @@
 
+// class to render solar system
 class CreateSolarSystem {
     constructor() {  } 
+
+    // Start Function render the first page
      start(){
 
         let mainDiv = document.createElement('div');
@@ -13,9 +16,9 @@ class CreateSolarSystem {
             .then(data => {
                 planetData = data;
             });
-            console.log('test2',planetData);
+            
         let planet = planetData;
-        console.log(planet)
+        
         for (let index = 0; index < planet.length; index++) {
              planet[index].name = document.createElement('div');   
         }
@@ -27,7 +30,7 @@ class CreateSolarSystem {
             planet[index].name.style.borderRadius = planet[index].borderadius;
             if(planet[index].id === "Saturnus"){
                 let ellipseDiv = document.createElement('div');
-                console.log(planet[index].name);
+                
                 planet[index].name.append(ellipseDiv);
                 ellipseDiv.style.borderTop= "solid";
                 ellipseDiv.style.rotate= "-27deg";
@@ -35,13 +38,9 @@ class CreateSolarSystem {
                 ellipseDiv.style.width = "148px";
                 ellipseDiv.style.borderColor = "white";
                 ellipseDiv.style.marginTop="50%";
-            // planet[index].name.style.borderTop: 1px solid black;
-            //     width: 150px;
-            //      rotate: -30deg;
-            //     filter: blur(2px);
-            console.log("Click Saturnus");
+
             }
-            console.log(planet[index].name);
+            
         }
         for (let index = 0; index < planet.length; index++) {
             mainDiv.appendChild(planet[index].name);    
@@ -51,11 +50,12 @@ class CreateSolarSystem {
   }
 }
 
+// class to display planet information
 class DisplayPlanetDetails {
     constructor() { 
      
      } 
-
+// solaris function that fetch data through api
     async solaris() {
         let resp = await fetch("https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/bodies", {
         method: "GET",
@@ -64,7 +64,7 @@ class DisplayPlanetDetails {
     const data = await resp.json();
     window.solaris = data.bodies;
 
-    console.log(data);
+    
 
     
 
@@ -179,7 +179,7 @@ class DisplayPlanetDetails {
         let p312 = document.createElement('p');
         cardDiv.append(p312);
         if(data.bodies[index].moons.length > 0){
-            console.log(data.bodies[index].moons.length);
+            
             for (let i = 0; i < data.bodies[index].moons.length; i++) {
                 
                 p312.innerHTML += data.bodies[index].moons[i] + " - ";                
@@ -192,7 +192,8 @@ class DisplayPlanetDetails {
         
        
              
-            console.log(data.bodies[index].name,data.bodies[index].desc, data.bodies[index].circumference,data.bodies[index].latinName, data.bodies[index].type, data.bodies[index].distance,data.bodies[index].rotation ); });    
+ 
+        });    
          
        }
 
@@ -215,23 +216,4 @@ displayPlanetDetails.solaris();
 
 
 
-  
-
-
-//    for (let index = 0; index < alldivs.length; index++) {
-//          // set an event listener for it
-//          alldivs[index].addEventListener('click',function(){
-
-//       //create a new div
-//      var div2 =  document.createElement('div');
-//       //giv that div an id of two
-//       div2.setAttribute("id", "two");
-//       //append the new div to the dom
-//      this.parentNode.appendChild(div2);
-//       //remove the clicked div
-//    this.parentNode.remove()
-//       this.parentNode.removeChild(this);
-//   });
-    
-//    }
     
