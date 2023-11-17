@@ -79,7 +79,7 @@ class DisplayPlanetDetails {
          this.parentNode.remove()
         //  this.parentNode.removeChild(this);
          let mainDiv = document.createElement('div');
-        mainDiv.style.cssText = 'position:fixed;width:100%;height:100%;z-index:100;display: grid; grid-template-columns: 1fr 3fr; grid-gap: 2px;justify-items: center; align-items: center; background: linear-gradient(to left, #0C164D 0%, #190B22 100%); text-align: justify; font-family: Arial, Helvetica, sans-serif; font-size: 16px; ';
+        mainDiv.style.cssText = 'line-height:1.1;position:fixed;width:100%;height:100%;z-index:100;display: grid; grid-template-columns: 1fr 3fr; grid-gap: 2px;justify-items: center; align-items: center; background: linear-gradient(to left, #0C164D 0%, #190B22 100%); text-align: justify; font-family: Arial, Helvetica, sans-serif; font-size: 16px; ';
         document.body.append(mainDiv);
         let backToMainPage = document.createElement("button");
         backToMainPage.style.width = 50+"px";
@@ -114,33 +114,64 @@ class DisplayPlanetDetails {
         cardDiv.style.letterSpacing = "1px";
         p.innerHTML += data.bodies[index].desc;
 
+        let hr1 = document.createElement('hr');
+        cardDiv.append(hr1);
+        hr1.style.backgroundColor= "#fff";
+        hr1.style.padding= "0";
+        hr1.style. border= "0";
+        hr1.style.height= "1px";
+        hr1.style.width= "100%";
+
+        let GridDiv = document.createElement('div');
+        cardDiv.append(GridDiv);
+        GridDiv.style.display= "grid";
+        GridDiv.style.gridTemplateColumns= "1fr 1fr";
+        GridDiv.style.gridGgap= "10px";
+
+
+        let section1 = document.createElement('section');
+        GridDiv.append(section1);
         let h32 = document.createElement('h3');
-        cardDiv.append(h32);
+        section1.append(h32);
         h32.innerText += "OMKRETS";
         let p33 = document.createElement('p');
-        cardDiv.append(p33);
+        section1.append(p33);
         p33.innerHTML += data.bodies[index].circumference +" KM";
 
+        let section2 = document.createElement('section');
+        GridDiv.append(section2);
         let h34 = document.createElement('h3');
-        cardDiv.append(h34);
+        section2.append(h34);
         h34.innerText += "KM FRÅN SOLEN";
         let p35 = document.createElement('p');
-        cardDiv.append(p35);
+        section2.append(p35);
         p35.innerHTML += data.bodies[index].distance +" KM";
 
+        let section3 = document.createElement('section');
+        GridDiv.append(section3);
         let h36 = document.createElement('h3');
-        cardDiv.append(h36);
+        section3.append(h36);
         h36.innerText += "MAX TEMPERATUR";
         let p37 = document.createElement('p');
-        cardDiv.append(p37);
+        section3.append(p37);
         p37.innerHTML += data.bodies[index].temp.day +"C";
 
+        let section4 = document.createElement('section');
+        GridDiv.append(section4);
         let h38 = document.createElement('h3');
-        cardDiv.append(h38);
+        section4.append(h38);
         h38.innerText += "MIN TEMPERATUR";
         let p39 = document.createElement('p');
-        cardDiv.append(p39);
+        section4.append(p39);
         p39.innerHTML += data.bodies[index].temp.night +"C";
+
+        let hr2 = document.createElement('hr');
+        cardDiv.append(hr2);
+        hr2.style.backgroundColor= "#fff";
+        hr2.style.padding= "0";
+        hr2.style. border= "0";
+        hr2.style.height= "1px";
+        hr2.style.width= "100%";
 
         let h311 = document.createElement('h3');
         cardDiv.append(h311);
